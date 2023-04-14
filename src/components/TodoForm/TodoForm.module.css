@@ -1,0 +1,51 @@
+.TodoForm {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.inputForm{
+    background:#FAFAF9;
+    align-items: center;
+    padding: 0px;
+    width: 606px;
+    height: 60px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+.createBtn{
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #075985;
+    color: #ffffff;
+    width: 94px;
+    height: 36px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    border: none;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.noOutline{
+    margin: 16px;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background:none;
+}
+
+.cancel{
+    color: #075985;
+}
+
+
