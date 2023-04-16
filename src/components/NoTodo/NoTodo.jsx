@@ -3,7 +3,7 @@ import styles from './NoTodo.module.css';
 
 function NoTodo() {
     return (
-        <div className={styles.NoTodo}>Nothing todo yet.</div>
+        <div className={styles.NoTodo}>Nothing to-do yet.</div>
     )
 }
 

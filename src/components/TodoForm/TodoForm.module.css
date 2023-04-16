@@ -1,21 +1,34 @@
 .TodoForm {
-    width: 800px;
     display: flex;
+    width: 800px;
     justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
-}
-.inputForm{
-    background:#FAFAF9;
     align-items: center;
+  }
+  
+  .TodoForm > form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+  
+  .inputForm{
+    background:#FAFAF9;
     padding: 0px;
-    width: 606px;
-    height: 60px;
+    margin-top: 28px;
+    width: 600px;
+    min-height: 36px;
     font-size: 16px;
+    font-weight: 400;
+    resize: none;
     border: none;
     outline: none;
-}
-.createBtn{
+    word-break: break-word;
+  }
+  
+  .createBtn{
     justify-content: center;
     align-items: center;
     border-radius: 8px;
@@ -30,9 +43,9 @@
     line-height: 20px;
     border: none;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
-}
-
-.noOutline{
+  }
+  
+  .noOutline{
     margin: 16px;
     outline: none;
     border: none;
@@ -42,10 +55,8 @@
     align-items: center;
     cursor: pointer;
     background:none;
-}
-
-.cancel{
+  }
+  
+  .cancel{
     color: #075985;
-}
-
-
+  }
