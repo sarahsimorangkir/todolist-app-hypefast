@@ -1,6 +1,6 @@
 # To-do list app
 
-# # # Functionality: 
+### Functionality: 
 - The user can create a to-do item
 - The user cannot create a to-do item if the input contains more than 100 characters, and a reminder message will be displayed 
 - The user can mark a to-do item as finished
