@@ -1,3 +1,15 @@
+# To-do list app
+
+# # # Functionality: 
+- The user can create a to-do item
+- The user cannot create a to-do item if the input contains more than 100 characters, and a reminder message will be displayed 
+- The user can mark a to-do item as finished
+- The user can remove each to-do item
+- The user can remove all to-do list items. 
+
+Addition: 
+- The user can update a to-do item as unfinished 
+- The clear button will hide if there are no to-do items in the list.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

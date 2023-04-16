@@ -1,7 +1,7 @@
 import styles from "./Reminder.module.css";
 
 /**
- * a Reminder component to show reminder if character of the todo is equal to 0 or more than 100 characters
+ * a Reminder component to show reminder if character of the todo is more than 100 characters
  * @returns component
  */
 
