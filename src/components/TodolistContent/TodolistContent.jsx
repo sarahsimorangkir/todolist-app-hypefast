@@ -5,6 +5,11 @@ import TodoForm from "../TodoForm/TodoForm";
 import NoTodo from "../NoTodo/NoTodo";
 import Modal from "../Modal/Modal";
 
+/**
+ * The component to display todolist content
+ * @returns component
+ */
+
 function TodoListContent({ showButton, setShowButton }) {
   const [todos, setTodos] = useState([
     {
@@ -27,16 +32,19 @@ function TodoListContent({ showButton, setShowButton }) {
     todos.map((todo) => todo.completed)
   );
 
+  //called when the Clear button is clicked or when the Modal dialog box is closed
   const onChangeShowModal = () => {
     setshowModal(!showModal);
   };
 
+  //creates a new todo
   const createTodo = (text) => {
     const newTodo = { text, completed: false };
     setTodos([...todos, newTodo]);
     setCompleted([...completed, false]);
   };
 
+  //updates the completed state 
   const finishTodo = (index) => {
     const newTodo = [...todos];
     newTodo[index].completed = true;
@@ -59,6 +67,7 @@ function TodoListContent({ showButton, setShowButton }) {
     ]);
   };
 
+  //removes each todo that clicked
   const deleteTodo = (index) => {
     const newTodo = [...todos];
     newTodo.splice(index, 1);
@@ -66,6 +75,7 @@ function TodoListContent({ showButton, setShowButton }) {
     setCompleted([...completed.slice(0, index), ...completed.slice(index + 1)]);
   };
 
+  //removes all the todo
   const deleteAllTodo = () => {
     const newTodo = [...todos];
     newTodo.splice(0, newTodo.length);
@@ -80,6 +90,7 @@ function TodoListContent({ showButton, setShowButton }) {
           Things you should be doing today...
         </h1>
         <div className={styles.headingLeft}>
+          {/* This button is displayed conditionally based on the state of showButton. */}
           {showButton && (
             <button
               className={styles.createBtn}
@@ -88,6 +99,7 @@ function TodoListContent({ showButton, setShowButton }) {
               Add New
             </button>
           )}
+          {/* This button shows a modal and clears all the todos in the list when clicked. */}
           <button
             setShowButton={setShowButton}
             deleteAllTodo={deleteAllTodo}
@@ -101,10 +113,10 @@ function TodoListContent({ showButton, setShowButton }) {
         </div>
       </div>
       <div className={styles.TodolistCard}>
+        {/*Render a TodoForm component when stateful 'showButton' is false*/}
         {!showButton && (
           <TodoForm setShowButton={setShowButton} createTodo={createTodo} />
         )}
-       
         <div className={styles.TodolistContentAll}>
           {todos.length > 0 ? (
             todos.map((todo, index) => (

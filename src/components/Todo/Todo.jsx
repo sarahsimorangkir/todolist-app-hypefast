@@ -4,6 +4,12 @@ import CheckCircle from "../../assets/img/CheckCircle.svg";
 import MinusCircle from "../../assets/img/MinusCircle.svg";
 import CheckCircleDone from "../../assets/img/CheckCircleDone.svg";
 
+/**
+ * a Todo component display a single to-do item
+ * consists of mark todo status (finish or unfinished) and delete todo
+ * @returns component
+ */
+
 function Todo({
   todo,
   index,
@@ -20,7 +26,9 @@ function Todo({
       >
         <button
           key={index}
-          onClick={() => (completed ? unfinishedTodo(index) : finishTodo(index))}
+          onClick={() =>
+            completed ? unfinishedTodo(index) : finishTodo(index)
+          }
           className={styles.Button}
         >
           <img

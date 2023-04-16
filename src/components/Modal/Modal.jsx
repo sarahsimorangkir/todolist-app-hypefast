@@ -1,6 +1,11 @@
 import React from "react";
 import styles from './Modal.module.css';
 
+/**
+ * A modal component to show confirmation messages
+ * @returns {JSX.Element}
+ */
+
 function Modal({onChangeShowModal, deleteAllTodo}) {
     return (
         <div className={styles.Modal}>
